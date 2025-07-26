@@ -6,6 +6,13 @@ function rollDice(){
       const values=[]
       const images=[]
 
+
+      if (numOfDice > 6) {
+    diceResult.textContent = "mehh";
+    diceImages.innerHTML = "";
+    return;
+  }
+
       for (let i=0; i< numOfDice; i++){
             const value =Math.floor(Math.random()* 6) +1;
             values.push(value);
